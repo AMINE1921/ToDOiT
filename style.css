@@ -1,3 +1,17 @@
+@keyframes masuperanimation {
+  0% {
+      transform: translateX(0px);
+  }
+
+  50% {
+      transform: translateX(150px);
+  }
+
+  100% {
+      transform: translateX(150px) rotate(30deg);
+  }
+}
+
 body
 {
     background-color: #F9F9F9;
@@ -55,6 +69,14 @@ input
     position:absolute;
     bottom:30px;
     right:50px;
+  }
+  .addimg:hover
+  {
+    filter: drop-shadow(0 0 0.75rem crimson);
+  }
+  .addimg:active
+  {
+    animation: masuperanimation 2s;
   }
 
 @media screen and (max-width: 1024px)
