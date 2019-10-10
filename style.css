@@ -1,0 +1,33 @@
+body
+{
+    background-color: #F9F9F9;
+}
+.navbar
+{
+    background: linear-gradient(to left, #FFECD2, #FCB69F);
+}
+.navbar-brand 
+{
+    color: white !important;
+}
+p, label 
+{
+    font: 1rem 'Fira Sans', sans-serif;
+}
+.element
+{
+    background-color: #FFFFFF ;
+}
+
+input {
+    margin-left: 5em;
+    margin: 3em;
+}
+
+@media screen and (max-width: 1024px)
+{
+    .items 
+    {
+        font-size: 500%%;
+    }
+}
