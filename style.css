@@ -86,6 +86,7 @@ input[type='text'] {
 }
 
 .close {
+  color: black;
 }
 
 .close:hover {
