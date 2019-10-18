@@ -19,30 +19,46 @@
 //   }
 // }
 
+// var span = document.createElement("SPAN");
+//   var txt = document.createTextNode("\u00D7");
+//   span.className = "close";
+//   span.appendChild(txt);
+//   li.appendChild(span);
+
+//   for (i = 0; i < close.length; i++) {
+//     close[i].onclick = function() {
+//       var div = this.parentElement;
+//       div.style.display = "none";
+//     }
+//   }
+
 
 $(function () {
-    var $list, $li, $newItemForm;
+    var $list, $li, $newItemForm, $div;
     $list = $('ul#items');
     $newItemForm = $('#newItemForm');
     $li = $('ul#items li');
 
     $li.append('<span class="close">\u00D7</span>');
+    // $li.append('<span class="close"><img src="ToDOiT/Mockup/delete-2.png" alt="Supp"></span>');
+
+    $('span').click(function () {
+        $(this).parent().hide();
+    });
 
     $newItemForm.on('submit', function (e) {
         e.preventDefault();
         var text = $('input:text').val();
+        var spann = $('<span class="close">\u00D7</span>');
         $list.append('<li>' + text + '</li>');
+        $li.append('<span class="close">\u00D7</span>');
         $('input:text').val('');
+        $('span').click(function () {
+            $(this).parent().hide();
+        });
     });
 
     $list.on('click', 'li', function () {
-        var $this = $(this);
-        $this.toggleClass("checked");
+        $(this).toggleClass("checked");
     });
-
-    // $list.on('dblclick', 'li', function() {
-    //   var $this = $(this);
-    //   $this.remove();
-    // });
-
 });
