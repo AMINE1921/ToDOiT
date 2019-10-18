@@ -83,13 +83,6 @@ input[type='text'] {
   color: black;
 }
 
-/* .close:hover {
-  background-color: #f44336;
-  color: white;
-  padding: 0.5em;
-} */
-
-
 @media screen and (max-width: 1024px) {
 
   ul#items li {
