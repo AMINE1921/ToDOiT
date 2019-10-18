@@ -50,8 +50,7 @@ $(function () {
         e.preventDefault();
         var text = $('input:text').val();
         var spann = $('<span class="close">\u00D7</span>');
-        $list.append('<li>' + text + '</li>');
-        $li.append('<span class="close">\u00D7</span>');
+        $list.append('<li>' + text + ' <span class="close">\u00D7</span> </li>');
         $('input:text').val('');
         $('span').click(function () {
             $(this).parent().hide();
