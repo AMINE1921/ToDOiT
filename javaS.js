@@ -1,6 +1,6 @@
 $(function () {
     var $list, $li, $newItemForm, $div;
-    $list = $('ul#items');
+    $list = $('ul.items');
     $newItemForm = $('#newItemForm');
     $li = $('ul#items li');
     function cacher() {
