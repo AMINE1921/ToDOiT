@@ -14,10 +14,12 @@ $(function () {
         e.preventDefault();
         var text = $('input:text').val();
         var spann = $('<span class="close">\u00D7</span>');
+        if(text == ''){}
+        else{
         $list.append('<li>' + text + ' <span class="close">\u00D7</span> </li>');
         $('input:text').val('');
         cacher();
-    });
+    }});
 
     $list.on('click', 'li', function () {
         $(this).toggleClass("checked");
