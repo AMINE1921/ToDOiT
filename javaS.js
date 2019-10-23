@@ -3,12 +3,12 @@ $(function () {
     $list = $('ul#items');
     $newItemForm = $('#newItemForm');
     $li = $('ul#items li');
+    function cacher() {
+        $('.close').click(function () {
+            $(this).parent().remove();
+        })};
 
-    $li.append('<span class="close">\u00D7</span>');
-
-    $('span').click(function () {
-        $(this).parent().hide();
-    });
+    cacher();
 
     $newItemForm.on('submit', function (e) {
         e.preventDefault();
@@ -16,9 +16,7 @@ $(function () {
         var spann = $('<span class="close">\u00D7</span>');
         $list.append('<li>' + text + ' <span class="close">\u00D7</span> </li>');
         $('input:text').val('');
-        $('span').click(function () {
-            $(this).parent().hide();
-        });
+        cacher();
     });
 
     $list.on('click', 'li', function () {
