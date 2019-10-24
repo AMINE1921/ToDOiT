@@ -85,14 +85,6 @@ input[type='text'] {
 
 @media screen and (max-width: 1024px) {
 
-  ul.items li {
-    padding: 1em;
-  }
-
-  #newItemForm {
-    position: fixed;
-    bottom: 30px;
-    right: -10%;
-  }
+  
   
 }
